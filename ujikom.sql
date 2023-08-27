@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `pendaftar`
 --
 
-CREATE TABLE `ujikom` (
+CREATE TABLE `pendaftar` (
   `id` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,

@@ -11,10 +11,10 @@ if(isset($_POST['daftar'])){
 	$email = $_POST['email'];
 	$hp = $_POST['hp'];
 	$semester = $_POST['semester'];
-/* 	$randIpk = $_POST['ipk']; */
+ 	$randIpk = $_POST['ipk']; 
 	$beasiswa = $_POST['beasiswa'];
-/*   	$berkas = $_POST['berkas'];  */
-/* 2 	$proses = "Belum diverifikasi";  */
+   	$berkas = $_POST['berkas']; 
+	$proses = "belum diverifikasi";  
 
 
 
@@ -30,7 +30,7 @@ if(!in_array($ext, $ekstensi)) {
 	if($ukuran < 1044070){
 		$xx = $rand.'_'.$filename;
 		move_uploaded_file($_FILES['berkas']['tmp_name'], 'uploads/'.$rand.'_'.$filename);
-		mysqli_query($db, "INSERT INTO register VALUES(NULL, '$nama', '$email', '$hp', '$semester', '$beasiswa', '$xx')");
+		mysqli_query($db, "INSERT INTO pendaftar VALUES(NULL, '$nama', '$email', '$hp', '$semester', '$randIpk', '$beasiswa', '$xx', '$proses')");
 		header("location:list-pendaftar.php?alert=berhasil");
 	}else{
 		header("location:index.php?alert=gagal_ukuran");

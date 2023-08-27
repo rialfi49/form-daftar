@@ -49,7 +49,6 @@
 					<th>Email</th>
 					<th>No HP</th>
 					<th>Semester</th>
-					<th>IPK</th>
 					<th>Pilihan Beasiswa</th>
 					<th>Berkas Syarat</th>
 					<th>Status</th>
@@ -57,11 +56,11 @@
 			</thead>
 			<tbody>
 				<?php
-				$sql = "SELECT * FROM register";
+				$sql = "SELECT * FROM pendaftar";
 				$query = mysqli_query($db, $sql);
 				
 				while($row = mysqli_fetch_array($query)){
-/* 					echo "<tr>";
+					echo "<tr>";
 					echo "<td>".$row['id']."</td>";
 					echo "<td>".$row['nama']."</td>";
 					echo "<td>".$row['email']."</td>";
@@ -69,10 +68,11 @@
 					echo "<td>".$row['semester']."</td>";
 					echo "<td>".$row['beasiswa']."</td>";
 					echo "<td>".$row['berkas']."</td>";	
-					echo "</tr>"; */
+					echo "<td>".$row['status']."</td>";	
+					echo "</tr>"; 
 
 					?>
-					<tr>
+					<!-- <tr>
 						<td><? echo $row["id"]; ?></td>
 						<td><? echo $row["nama"]; ?></td>
 						<td><? echo $row["email"]; ?></td>
@@ -81,7 +81,7 @@
 						<td><? echo $row["beasiswa"]; ?></td>
 						<td><img src="<?php echo "uploads/".$row['berkas']; ?>" width="50" height="55"></td>
 						<td></td>
-					</tr>
+					</tr> -->
 				<?php } ?>		
 
 			</tbody>
