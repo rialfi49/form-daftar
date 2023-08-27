@@ -30,7 +30,7 @@ if(!in_array($ext, $ekstensi)) {
 	if($ukuran < 1044070){
 		$xx = $rand.'_'.$filename;
 		move_uploaded_file($_FILES['berkas']['tmp_name'], 'uploads/'.$rand.'_'.$filename);
-		mysqli_query($db, "INSERT INTO register VALUES(NULL, '$nama', '$email', '$hp', '$semester', '$beasiswa', '$xx')");
+		mysqli_query($db, "INSERT register INTO VALUES(NULL, '$nama', '$email', '$hp', '$semester', '$randIpk','$beasiswa', '$xx')");
 		header("location:list-pendaftar.php?alert=berhasil");
 	}else{
 		header("location:index.php?alert=gagal_ukuran");
