@@ -72,12 +72,12 @@
                         </select>
                     </div> 
  
-<!--                     <div class="form-group row">
+                    <div class="form-group row">
                         <label class="control-label col-sm-2" for="ipk">IPK Terakhir</label>
                         <div class="col-sm-10">
-                            <input class="form-control" id="ipk" name="ipk" value="<?php echo $randIpk; ?>" required disabled> 
+                            <input class="form-control" id="ipk" name="ipk" value="<?php echo  $randIpk; ?>" required disabled> 
                         </div>
-                    </div> --> 
+                    </div> 
 
                     <div class="form-group row">
                         <label class="control-label col-sm-2" for="beasiswa" >Pilihan Beasiswa</label>
